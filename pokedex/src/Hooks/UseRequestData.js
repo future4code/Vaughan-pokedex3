@@ -10,14 +10,10 @@ const useRequestData = (initialState, url) => {
     }, [url]);
 
     const getData = () => {
-        axios.get(url, {
-                headers: {
-                    Authorization: window.localStorage.getItem('token')
-                }
-            })
+        axios.get(url)
             .then((response) => {
                 setData(response.data)
-                getData()
+                
             })
             .catch((error) => {
                 alert('Ocorreu um erro, tente novamente!')

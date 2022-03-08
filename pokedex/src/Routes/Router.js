@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from '../Pages/Home'
-import PaginaDetalhes from '../Pages/PaginaDetalhes'
-import PaginaPokedex from '../Pages/PaginaPokedex'
-import PaginaErro from '../Pages/PaginaErro'
+import Home from '../Pages/Home/Home'
+import PaginaDetalhes from '../Pages/PaginaDetalhes/PaginaDetalhes'
+import PaginaPokedex from '../Pages/PaginaPokedex/PaginaPokedex'
+import PaginaErro from '../Pages/PaginaErro/PaginaErro'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 

@@ -1,10 +1,13 @@
 import React from 'react';
+import Router from './Routes/Router';
 
 function App() {
 
   return (
     <div >
-      <h1>PROJETO POKEDEXXXXXXXXXXXXX</h1>
+
+      <Router />
+
     </div>
   )
 

@@ -1,8 +1,9 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import { ContainerCard, EstiloCard, } from "./style";
 
 
-function CardsPokemons({nome, imagem}) {
+function CardsPokemons({nome, imagem, adicionarPokemon}) {
 
     return (
         <ContainerCard>
@@ -14,7 +15,7 @@ function CardsPokemons({nome, imagem}) {
                 />
 
                 <h3>{nome}</h3>
-                <button>adicionar</button>
+                <button onClick={adicionarPokemon}>adicionar</button>
                 <button>ver detalhes</button>
             </EstiloCard>
         </ContainerCard>

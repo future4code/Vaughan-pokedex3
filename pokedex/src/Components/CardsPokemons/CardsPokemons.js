@@ -1,6 +1,5 @@
 import React from "react";
-import { ContainerCard, EstiloCard, } from "./style";
-
+import { ContainerCard, EstiloCard, } from "./style"
 
 function CardsPokemons({nome, imagem}) {
 
@@ -15,7 +14,7 @@ function CardsPokemons({nome, imagem}) {
 
                 <h3>{nome}</h3>
                 <button>adicionar</button>
-                <button>ver detalhes</button>
+                <button >ver detalhes</button>
             </EstiloCard>
         </ContainerCard>
     )

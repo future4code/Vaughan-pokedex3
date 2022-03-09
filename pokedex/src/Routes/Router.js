@@ -14,7 +14,7 @@ function Router() {
 
                 <Route path={"/"} element={<Home />} />
 
-                <Route path={"/detalhes"} element={<PaginaDetalhes />} />
+                <Route path={"/detalhes/:nome"} element={<PaginaDetalhes />} />
 
                 <Route path={"/pokedex"} element={<PaginaPokedex />} />
 

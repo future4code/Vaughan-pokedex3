@@ -2,8 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ContainerCard} from "./style";
 
-function CardsPokemons() {
-    const [listaPoke] = useRequestData([], `${BASE_URL}/pokemon/?offset=0&limit=10`)
 
 function CardsPokemons({nome, imagem}) {
     const navigate = useNavigate()

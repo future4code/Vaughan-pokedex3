@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import Pokebola from "../../Assets/pokebola.png"
+import fogo from "../../Assets/fogo.png"
+
 
 export const ContainerCard = styled.div`
 
@@ -14,6 +17,9 @@ margin: 20px;
     img{
         width: 130px;
     }
+}
+.detalhes{
+    
 }
 `
 

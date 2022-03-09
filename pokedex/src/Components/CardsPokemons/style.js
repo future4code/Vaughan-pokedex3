@@ -1,25 +1,18 @@
 import styled from "styled-components";
 
-export const EstiloCard = styled.div`
-width: 24rem;
-height: 55vh;
+export const ContainerCard = styled.div`
 
-border: 1px solid #000;
+width: 17rem;
+height: 21rem;
+
+background-color:#FAD61F;
 margin: 20px;
-.pokenome{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    height: 60%;
-    width: 100%;
-    background-color: #FAD61F;
+.imagemPoke{
+
+ 
     img{
-        width: 100px;
-        left: 70px;
-        
-        width: 230px;
-
+        width: 130px;
     }
 }
 `

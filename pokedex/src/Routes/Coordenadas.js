@@ -3,7 +3,7 @@ export const irParaHome = (navigate) => {
 }
 
 export const irParaDetalhes = (navigate) => {
-    navigate("/detalhes")
+    navigate("/detalhes/:nome")
 }
 
 export const irParaPokedex = (navigate) => {

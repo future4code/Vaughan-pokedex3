@@ -1,21 +1,23 @@
 import React from "react";
-import { ContainerCard, EstiloCard, } from "./style"
+import { useNavigate } from "react-router-dom";
+import { irParaDetalhes } from "../../Routes/Coordenadas";
+import { ContainerCard} from "./style";
+
 
 function CardsPokemons({nome, imagem}) {
-
+    const navigate = useNavigate()
     return (
         <ContainerCard>
-            <EstiloCard>
+                <div className="imagemPoke">
                 <img 
-                    alt="Imagens dos Pokemons"
+                    alt={nome}
                     src={imagem}
-                    lazy="Loading"
                 />
-
+                </div>
+               <h3>Tipo:</h3>
                 <h3>{nome}</h3>
-                <button>adicionar</button>
-                <button >ver detalhes</button>
-            </EstiloCard>
+                <button>Adicionar à pokedex</button>
+                <button onClick={()=> irParaDetalhes(navigate, nome)}>Detalhes</button>
         </ContainerCard>
     )
 }

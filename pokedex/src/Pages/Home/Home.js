@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import CardsPokemons from "../../Components/CardsPokemons/CardsPokemons";
 import { BASE_URLING } from "../../Constants/Urls";
 import GlobalStateContext from "../../Global/GlobalStateContext";
+import { ContainerHome } from "./Styled";
 
 
 function Home(){
@@ -17,9 +18,9 @@ function Home(){
             )
         })    
     return(
-        <div>
+        <ContainerHome>
            {listaMapeada}
-        </div>
+        </ContainerHome>
     )
 }
 export default Home;

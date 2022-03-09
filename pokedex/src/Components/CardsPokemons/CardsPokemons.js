@@ -1,18 +1,17 @@
-import React from "react";
-import { BASE_URL, BASE_URLING } from "../../Constants/Urls";
-import useRequestData from "../../Hooks/UseRequestData";
-import { EstiloCard, ImgPokemons } from "./style";
+import React, { useContext } from "react";
+import { BASE_URLING } from "../../Constants/Urls";
+import GlobalStateContext from "../../Global/GlobalStateContext";
+import { ContainerCard, EstiloCard, } from "./style";
+
 
 function CardsPokemons() {
-    const [listaPoke] = useRequestData([], `${BASE_URL}/pokemon/?offset=0&limit=10`)
-
-    console.log(listaPoke)
+    const {listaPoke, setListaPoke} = useContext(GlobalStateContext)
+    
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes, i) => {
         return (
             <EstiloCard key={pokes.name}>
-                <div className="pokenome">
-                <h3>{pokes.name}</h3>
-                <img
+                <div className="pokenome"  >
+                <img 
                     alt="Imagens dos Pokemons"
                     src={`${BASE_URLING}/${i + 1}.gif`}
                     lazy="Loading"
@@ -20,6 +19,7 @@ function CardsPokemons() {
                 </div>
 
                 <div className="detalhes">
+                <h3>{pokes.name}</h3>
 
                 <button>adicionar</button>
                 <button>ver detalhes</button>
@@ -28,9 +28,9 @@ function CardsPokemons() {
         )
     })
     return (
-        <div>
+        <ContainerCard>
             {listaMapeada}
-        </div>
+        </ContainerCard>
     )
 }
 export default CardsPokemons;

@@ -1,26 +1,34 @@
 import styled from "styled-components";
+import Pokebola from "../../Assets/pokebola.png"
+import fogo from "../../Assets/fogo.png"
+
+export const ContainerCard = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+`
 
 export const EstiloCard = styled.div`
-width: 24rem;
-height: 55vh;
+width: 22rem;
+height: 60vh;
 
 border: 1px solid #000;
 margin: 20px;
 .pokenome{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-
-    height: 60%;
+    background-image: url(${fogo});
+background-position: top center;
+    object-fit: cover;
+    height: 72%;
     width: 100%;
-    background-color: #FAD61F;
     img{
-        width: 100px;
-        left: 70px;
-        
-        width: 230px;
-
+        width: 170px;
     }
+}
+.detalhes{
+    
 }
 `
 

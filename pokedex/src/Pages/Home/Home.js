@@ -19,9 +19,7 @@ function Home(){
         })    
     return(
         <ContainerHome>
-            <div>oi</div>
            {listaMapeada}
-           <div>oi</div>
         </ContainerHome>
     )
 }

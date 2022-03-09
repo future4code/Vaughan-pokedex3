@@ -11,7 +11,7 @@ function GlobalState(props){
     const [pokemon] = useRequestData([], `${BASE_URL}/pokemon/${params.name}`);
     
     return(
-        <GlobalStateContext.Provider value={{listaPoke, setListaPoke, pokemon, pokemons, setPokemons, pokedex, setPokedex}}>
+        <GlobalStateContext.Provider value={{listaPoke, setListaPoke, pokemon}}>
             {props.children}
         </GlobalStateContext.Provider>
     )

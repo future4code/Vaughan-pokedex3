@@ -2,16 +2,24 @@ import React, {useState} from "react"
 import { BASE_URL } from "../Constants/Urls";
 import useRequestData from "../Hooks/UseRequestData";
 import GlobalStateContext from "./GlobalStateContext"
-import { useParams } from "react-router-dom";
 
-function GlobalState(props){
-    const params = useParams()
-
-    const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`);
-    const [pokemon] = useRequestData([], `${BASE_URL}/pokemon/${params.name}`);
+function GlobalState(props) {
+    const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
+    const [pokemons, setPokemons] = useState([])
     
-    return(
-        <GlobalStateContext.Provider value={{listaPoke, setListaPoke, pokemon}}>
+    const adicionarPokemon = (pokes) => {
+
+        const pokeAdd= [...pokemons]
+        if (pokes ) {
+            pokeAdd.push({...pokes});
+          alert("deu certo")
+          
+        }
+        setPokemons(pokeAdd)
+        console.log(pokeAdd)
+      };
+    return (
+        <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon}}>
             {props.children}
         </GlobalStateContext.Provider>
     )

@@ -19,7 +19,7 @@ const useRequestData = (initialState, url) => {
                 alert('Ocorreu um erro, tente novamente!')
             })
     }
-    return [data, getData]
+    return [data, setData,getData]
 }
 export default useRequestData
 

@@ -7,19 +7,8 @@ import GlobalStateContext from "../../Global/GlobalStateContext";
 function Home(){
     const {listaPoke, setListaPoke} = useContext(GlobalStateContext)
     const {pokemons, setPokemons} = useContext(GlobalStateContext)
-
-    const adicionarPokemon = (pokes) => {
-        
-        const pokeAdd= [...listaPoke.results]
-        
-        
-        if (pokes ) {
-            pokeAdd.push({ ...pokes});
-          alert("deu certo")
-        }
-        setPokemons(pokes)
-        console.log(pokemons)
-      };
+    const {adicionarPokemon} = useContext(GlobalStateContext)
+    
           
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes, i) => {
         return (

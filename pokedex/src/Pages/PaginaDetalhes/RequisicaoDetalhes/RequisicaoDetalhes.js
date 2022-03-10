@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import {CardPokemon} from './Style'
-import { Box, Flex, Grid, GridItem, Heading, Image, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Heading, Image, Tooltip, Stack, Progress } from '@chakra-ui/react'
 import { BASE_URL } from '../../../Constants/Urls'
 import { useParams } from 'react-router-dom'
 
@@ -13,7 +13,7 @@ function RequisicaoDetalhes() {
         axios
             .get(`${BASE_URL}/pokemon/${id}`)
             .then((res) => {
-                setdetalhePokemon([res.data]);
+                setdetalhePokemon([res.data])
             })
             .catch((err) => {
                 alert("Ocorreu um erro, tente novamente!")
@@ -28,7 +28,7 @@ function RequisicaoDetalhes() {
                 <img src={poke.sprites.back_default} />
 
                 <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>
-
+                
                 <h1>Stats</h1>
                 <p><b>Hp:</b> {poke.stats[0].base_stat}</p>
                 <p><b>Attack:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}</p>
@@ -50,11 +50,6 @@ function RequisicaoDetalhes() {
                     <p>- {poke.moves[2] ? poke.moves[2].move.name : 'N/A'}</p>
                     <p>- {poke.moves[3] ? poke.moves[3].move.name : 'N/A'}</p>
                     <p>- {poke.moves[4] ? poke.moves[4].move.name : 'N/A'}</p>
-                    <p>- {poke.moves[5] ? poke.moves[5].move.name : 'N/A'}</p>
-                    <p>- {poke.moves[6] ? poke.moves[6].move.name : 'N/A'}</p>
-                    <p>- {poke.moves[7] ? poke.moves[7].move.name : 'N/A'}</p>
-                    <p>- {poke.moves[8] ? poke.moves[8].move.name : 'N/A'}</p>
-                    <p>- {poke.moves[9] ? poke.moves[9].move.name : 'N/A'}</p>
                 </Box>
 
             </div>

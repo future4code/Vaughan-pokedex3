@@ -1,5 +1,5 @@
 import React from 'react'
-import RequisicaoDetalhes from './RequisicaoDetalhes/RequisicaoDetalhes'
+import RequisicaoDetalhes from './RequisicaoDetalhes/RequisicaoDetalhes';
 
 function PaginaDetalhes() {
 

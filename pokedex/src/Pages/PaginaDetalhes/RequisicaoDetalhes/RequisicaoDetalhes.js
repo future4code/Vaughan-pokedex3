@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import {CardPokemon} from './Style'
-import { Box, Flex, Grid, GridItem, Heading, Image, Tooltip, Stack, Progress } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Heading, Image, Tooltip } from '@chakra-ui/react'
 import { BASE_URL } from '../../../Constants/Urls'
 import { useParams } from 'react-router-dom'
 
@@ -28,7 +27,7 @@ function RequisicaoDetalhes() {
                 <img src={poke.sprites.back_default} />
 
                 <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>
-                
+
                 <h1>Stats</h1>
                 <p><b>Hp:</b> {poke.stats[0].base_stat}</p>
                 <p><b>Attack:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}</p>

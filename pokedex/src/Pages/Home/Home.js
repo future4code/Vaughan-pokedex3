@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import CardsPokemons from "../../Components/CardsPokemons/CardsPokemons";
 import { BASE_URLING } from "../../Constants/Urls";
 import GlobalStateContext from "../../Global/GlobalStateContext";
+import { ContainerHome } from "./Styled";
 
 
 function Home(){
     const {listaPoke, setListaPoke} = useContext(GlobalStateContext)
     const {pokemons, setPokemons} = useContext(GlobalStateContext)
     const {adicionarPokemon} = useContext(GlobalStateContext)
-    
-          
+
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes, i) => {
         return (
             <CardsPokemons
@@ -22,9 +22,9 @@ function Home(){
             )
         })    
     return(
-        <div>
+        <ContainerHome>
            {listaMapeada}
-        </div>
+        </ContainerHome>
     )
 }
 export default Home;

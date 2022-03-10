@@ -7,15 +7,16 @@ function GlobalState(props) {
     const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
     const [pokemons, setPokemons] = useState([])
     
-    const adicionarPokemon = () => {
-        
-        const pokeAdd= [...listaPoke.results]
+    const adicionarPokemon = (pokes) => {
+
+        const pokeAdd= [...pokemons]
         if (pokes ) {
-            pokeAdd.push({ ...pokemons});
+            pokeAdd.push({...pokes});
           alert("deu certo")
+          
         }
-        setPokemons(pokes)
-        console.log(pokemons)
+        setPokemons(pokeAdd)
+        console.log(pokeAdd)
       };
     return (
         <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon}}>

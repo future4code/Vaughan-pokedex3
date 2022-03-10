@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Box, Flex, Grid, GridItem, Heading, Image, Tooltip } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { BASE_URL } from '../../../Constants/Urls'
 import { useParams } from 'react-router-dom'
 

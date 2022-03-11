@@ -23,8 +23,7 @@ function RequisicaoDetalhes() {
         return (
             <div key={poke.name}>
 
-                <img src={poke.sprites.front_default} />
-                <img src={poke.sprites.back_default} />
+                <img src={poke.sprites.other.home.front_default} />
 
                 <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>
 

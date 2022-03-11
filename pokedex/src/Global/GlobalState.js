@@ -3,14 +3,6 @@ import { BASE_URL } from "../Constants/Urls";
 import useRequestData from "../Hooks/UseRequestData";
 import GlobalStateContext from "./GlobalStateContext"
 
-<<<<<<< HEAD
-function GlobalState(props){
-
-    const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`);
-    
-    return(
-        <GlobalStateContext.Provider value={{listaPoke, setListaPoke}}>
-=======
 function GlobalState(props) {
     const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
     const [pokemons, setPokemons] = useState([])
@@ -28,7 +20,6 @@ function GlobalState(props) {
       };
     return (
         <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon}}>
->>>>>>> master
             {props.children}
         </GlobalStateContext.Provider>
     )

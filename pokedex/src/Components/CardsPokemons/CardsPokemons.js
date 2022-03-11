@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { irParaDetalhes } from "../../Routes/Coordenadas";
 import { ContainerCard } from "./style";
 
 
-function CardsPokemons({ nome, imagem }) {
+function CardsPokemons({ nome, imagem, adicionarPokemon}) {
+    
+
     const navigate = useNavigate()
 
     return (
@@ -43,7 +45,8 @@ function CardsPokemons({ nome, imagem }) {
                                         </ul>
                                     </div>
                                     <div className="buttons">
-                                        <button className="btn item1">Adicionar à Pokédex</button>
+                               
+                                        <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex</button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
                                     </div>
                                 </div>

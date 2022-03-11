@@ -4,18 +4,20 @@ import { BASE_URLING } from "../../Constants/Urls";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 
 
+
 function PaginaPokedex() {
   const { pokemons, setPokemons } = useContext(GlobalStateContext)
-  const listPoke = pokemons.map((pikachu,i) => {
 
+
+  const listPoke = pokemons.map((pikachu, i) => {
     return (
       <div>
         <CardsPokemons
-           nome={pikachu.name}
-          imagem={`${BASE_URLING}/${i+1}.gif`}
-          />
+          nome={pikachu.name}
+          imagem={`${BASE_URLING}/${i + 1}.gif`}
+        />
       </div>
-)
+    )
   })
   console.log(pokemons)
   return (

@@ -56,8 +56,8 @@ export const ContainerCard = styled.div`
   
   .imagem {
   position: relative;
-  height: 100px;
-  padding-left: 55px;
+  height: 150px;
+  padding-left: 40px;
 }
 }
 

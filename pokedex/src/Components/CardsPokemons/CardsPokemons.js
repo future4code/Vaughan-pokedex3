@@ -1,11 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { BASE_URL } from "../../Constants/Urls";
+import useRequestData from "../../Hooks/UseRequestData";
+import  {Pokebola}  from "../../icons/icons";
 import { irParaDetalhes } from "../../Routes/Coordenadas";
 import { ContainerCard } from "./style";
 
 
 function CardsPokemons({ nome, imagem }) {
     const navigate = useNavigate()
+    
+    const nomePoke = nome
+    const pokemonData = useRequestData([], `${BASE_URL}/pokemon/${nomePoke}`)[0]
+
+    
     return (
         <ContainerCard>
                 <div className="main">
@@ -30,20 +38,9 @@ function CardsPokemons({ nome, imagem }) {
                                 </div>
 
                                 <div className="cartao-informacoes">
-                                    <div className="status">
-                                        <h3>Status</h3>
-
-                                        <ul className="ul">
-                                            <li>Hp: 300</li>
-                                            <li>Ataque: 600</li>
-                                            <li>Defesa: 500</li>
-                                            <li>Velocidade: 300</li>
-                                            <li>Total: 1700</li>
-                                        </ul>
-                                    </div>
                                     <div className="buttons">
-                                        <button className="btn item1">Adicionar à Pokédex</button>
-                                        <button className="btn item2">Mais detalhes</button>
+                                        <button className="btn item1">Adicionar à Pokédex <Pokebola/> </button>
+                                        <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
                                     </div>
                                 </div>
                             </div>

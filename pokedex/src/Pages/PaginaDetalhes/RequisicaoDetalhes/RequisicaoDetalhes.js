@@ -22,7 +22,7 @@ function RequisicaoDetalhes() {
     const renderizarPokemon = detalhePokemon && detalhePokemon.map((poke) => {
         return (
             <div key={poke.name}>
-
+                
                 <img src={poke.sprites.other.home.front_default} />
 
                 <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>

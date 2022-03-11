@@ -13,13 +13,12 @@ const useRequestData = (initialState, url) => {
         axios.get(url)
             .then((response) => {
                 setData(response.data)
-                
             })
             .catch((error) => {
                 alert('Ocorreu um erro, tente novamente!')
             })
     }
-    return [data, setData,getData]
+    return [data, setData, getData]
 }
 export default useRequestData
 

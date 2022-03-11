@@ -35,7 +35,7 @@ function RequisicaoDetalhes() {
                         </TiposContainer>
                     </DetalhesHeader>
 
-                    <img src={poke.sprites.other.home.front_default} alt={`${id}`} />
+                    <img src={poke.sprites.other.dream_world.front_default ? poke.sprites.other.dream_world.front_default : poke.sprites.other.home.front_default} alt={`${id}`} />
 
                     <DetalhesContainer>
 

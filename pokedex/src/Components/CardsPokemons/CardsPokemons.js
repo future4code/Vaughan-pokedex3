@@ -6,6 +6,7 @@ import { ContainerCard } from "./style";
 
 function CardsPokemons({ nome, imagem }) {
     const navigate = useNavigate()
+
     return (
         <ContainerCard>
                 <div className="main">
@@ -43,7 +44,7 @@ function CardsPokemons({ nome, imagem }) {
                                     </div>
                                     <div className="buttons">
                                         <button className="btn item1">Adicionar à Pokédex</button>
-                                        <button className="btn item2">Mais detalhes</button>
+                                        <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
                                     </div>
                                 </div>
                             </div>

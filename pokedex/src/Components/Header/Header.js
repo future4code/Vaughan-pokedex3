@@ -1,10 +1,14 @@
 import React from 'react'
-import { Menu, MenuButton, MenuList, MenuItem, IconButton, Icon, Flex } from '@chakra-ui/react'
+import { irParaHome } from '../../Routes/Coordenadas'
+import { Menu, MenuButton, MenuList, MenuItem, IconButton, Icon, Flex, Image } from '@chakra-ui/react'
 import { ImHome } from 'react-icons/im'
+import logoPokedex from '../../Assets/pokedex.png'
 import { MdOutlineCatchingPokemon } from 'react-icons/md'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+    const navigate = useNavigate()
 
     return (
         <Flex
@@ -15,6 +19,13 @@ function Header() {
             justify={'space-around'}
             align={'center'}
         >
+
+            <Image
+                src={logoPokedex}
+                onClick={() => irParaHome(navigate)}
+                _hover={{ cursor: "pointer" }}
+                maxW={'250px'} />
+
             <Flex justify={'flex-end'} align={'center'}>
                 <Menu>
                     <MenuButton
@@ -24,7 +35,8 @@ function Header() {
                         icon={<HamburgerIcon color={'white'} />}
                         variant='outline'
                         bg={'#161b25'}
-                        borderRadius={'10px'} 
+                        border={'5px'}
+                        borderRadius={'10px'}
                         boxShadow={'base'}
                         p={'6'}
                         width={'50px'}

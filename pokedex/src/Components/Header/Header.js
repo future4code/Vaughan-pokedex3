@@ -1,5 +1,5 @@
 import React from 'react'
-import { irParaHome } from '../../Routes/Coordenadas'
+import { irParaHome, irParaPokedex } from '../../Routes/Coordenadas'
 import { Menu, MenuButton, MenuList, MenuItem, IconButton, Icon, Flex, Image } from '@chakra-ui/react'
 import { ImHome } from 'react-icons/im'
 import logoPokedex from '../../Assets/pokedex.png'
@@ -46,11 +46,11 @@ function Header() {
                         }}
                     />
                     <MenuList justify={'center'} align={'center'} >
-                        <MenuItem >
+                        <MenuItem onClick={() => irParaHome(navigate)}>
                             <Icon as={ImHome} w={'20px'} h={'20px'} marginRight={'8px'} />
                             <p>Home</p>
                         </MenuItem>
-                        <MenuItem >
+                        <MenuItem onClick={() => irParaPokedex(navigate)}>
                             <Icon as={MdOutlineCatchingPokemon} w={'20px'} h={'20px'} marginRight={'8px'} />
                             <p>Pokédex</p>
                         </MenuItem>

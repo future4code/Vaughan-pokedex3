@@ -13,9 +13,9 @@ function Header() {
     return (
         <Flex
             w={"100%"}
-            bg={"#161b25"}
+            bg={"#000000"}
             borderBottonColor={"#000000"}
-            boxShadow={'2xl'} h={['125px']}
+            boxShadow={'2xl'} h={['100px']}
             justify={'space-around'}
             align={'center'}
         >
@@ -24,7 +24,7 @@ function Header() {
                 src={logoPokedex}
                 onClick={() => irParaHome(navigate)}
                 _hover={{ cursor: "pointer" }}
-                maxW={'250px'} />
+                maxW={'220px'} />
 
             <Flex justify={'flex-end'} align={'center'}>
                 <Menu>
@@ -34,7 +34,7 @@ function Header() {
                         aria-label='Options'
                         icon={<HamburgerIcon color={'white'} />}
                         variant='outline'
-                        bg={'#161b25'}
+                        bg={'#000000'}
                         border={'5px'}
                         borderRadius={'10px'}
                         boxShadow={'base'}
@@ -42,15 +42,35 @@ function Header() {
                         width={'50px'}
                         height={'50px'}
                         _hover={{
-                            bg: "#696f81"
+                            bg: "#696f81",
+                            cursor: "pointer"
                         }}
                     />
-                    <MenuList justify={'center'} align={'center'} >
-                        <MenuItem onClick={() => irParaHome(navigate)}>
+                    <MenuList justify={'center'} align={'center'} 
+                   boxShadow={'2xl'}>
+                        <MenuItem onClick={() => irParaHome(navigate)}
+                            _hover={{
+                                bg: "#AEFCFF",
+                                cursor: "pointer"
+                            }}
+                            border={'2px'}
+                            borderTopLeftRadius={"5px"}
+                            borderTopRightRadius={"5px"}
+                            width={'150px'}
+                        >
                             <Icon as={ImHome} w={'20px'} h={'20px'} marginRight={'8px'} />
                             <p>Home</p>
                         </MenuItem>
-                        <MenuItem onClick={() => irParaPokedex(navigate)}>
+                        <MenuItem onClick={() => irParaPokedex(navigate)}
+                            _hover={{
+                                bg: "#AEFCFF",
+                                cursor: "pointer"
+                            }}
+                            border={'2px'}
+                            borderBottomLeftRadius={"5px"}
+                            borderBottomRightRadius={"5px"}
+                            width={'150px'}
+                        >
                             <Icon as={MdOutlineCatchingPokemon} w={'20px'} h={'20px'} marginRight={'8px'} />
                             <p>Pokédex</p>
                         </MenuItem>

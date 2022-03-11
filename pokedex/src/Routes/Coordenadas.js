@@ -2,7 +2,7 @@ export const irParaHome = (navigate) => {
     navigate("/")
 }
 
-export const irParaDetalhes = (navigate,  nome) => {
+export const irParaDetalhes = (navigate, nome) => {
     navigate(`/detalhes/${nome}`)
 }
 

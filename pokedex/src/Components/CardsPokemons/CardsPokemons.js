@@ -7,7 +7,9 @@ import { irParaDetalhes } from "../../Routes/Coordenadas";
 import { ContainerCard } from "./style";
 
 
-function CardsPokemons({ nome, imagem }) {
+function CardsPokemons({ nome, imagem, adicionarPokemon}) {
+    
+
     const navigate = useNavigate()
     
     const nomePoke = nome
@@ -39,7 +41,8 @@ function CardsPokemons({ nome, imagem }) {
 
                                 <div className="cartao-informacoes">
                                     <div className="buttons">
-                                        <button className="btn item1">Adicionar à Pokédex <Pokebola/> </button>
+                               
+                                        <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex</button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
                                     </div>
                                 </div>

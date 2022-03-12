@@ -7,7 +7,8 @@ import { irParaDetalhes } from "../../Routes/Coordenadas";
 import { ContainerCard, resolveBackground, RESOLVE_STYLE } from "./style";
 
 
-function CardsPokemons({ nome, imagem, adicionarPokemon, background}) {
+function CardsPokemons({ nome, imagem, adicionarPokemon, removerPokemon}) {
+
     const navigate = useNavigate()
     const poke = nome
     const pokemonData = useRequestData({}, `${BASE_URL}/pokemon/${poke}`)[0];
@@ -43,6 +44,7 @@ function CardsPokemons({ nome, imagem, adicionarPokemon, background}) {
                                     <div className="buttons">
                                         <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex <Pokebola className="pokebola"/></button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
+                                       
                                     </div>
                                 </div>
                             </div>

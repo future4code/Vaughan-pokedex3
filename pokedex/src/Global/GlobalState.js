@@ -18,8 +18,18 @@ function GlobalState(props) {
         setPokemons(pokeAdd)
         console.log(pokeAdd)
       };
+
+    const removerPokemon =(index)=>{
+      const novo = pokemons.slice()
+      novo.splice(index, 1)
+      setPokemons({pokemons})
+      console.log(pokemons)
+      
+      
+    }
+
     return (
-        <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon}}>
+        <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon, removerPokemon}}>
             {props.children}
         </GlobalStateContext.Provider>
     )

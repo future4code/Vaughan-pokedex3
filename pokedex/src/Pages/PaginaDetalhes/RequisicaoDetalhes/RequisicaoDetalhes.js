@@ -35,7 +35,7 @@ function RequisicaoDetalhes() {
                         </TiposContainer>
                     </DetalhesHeader>
 
-                    <img src={poke.sprites.other.dream_world.front_default ? poke.sprites.other.dream_world.front_default : poke.sprites.other.home.front_default} alt={`${id}`} />
+                    <img src={poke.sprites.other.dream_world.front_default}/>
 
                     <DetalhesContainer>
 
@@ -46,6 +46,7 @@ function RequisicaoDetalhes() {
                         <StatusContainer>
                             <h1>Stats</h1>
                             <div>
+                              
                                 <p> <GiHeartBottle /> <b>HP:</b> {poke.stats[0].base_stat}</p>
                                 <p> <GiPointySword /> <b>Ataque:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}</p>
                                 <p> <GiShieldEchoes /> <b>Defesa:</b> {poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'}</p>
@@ -74,7 +75,7 @@ function RequisicaoDetalhes() {
 
     return (
         <div>
-            {renderizarPokemon && renderizarPokemon.length > 0 ? renderizarPokemon : <h1>Caregando...</h1>}
+            {renderizarPokemon && renderizarPokemon.length > 0 ? renderizarPokemon : <h1>Carregando...</h1>}
         </div>
     )
 }

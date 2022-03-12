@@ -1,11 +1,10 @@
 import React, {useState} from "react"
-import { useParams } from "react-router-dom";
 import { BASE_URL } from "../Constants/Urls";
 import useRequestData from "../Hooks/UseRequestData";
 import GlobalStateContext from "./GlobalStateContext"
 
 function GlobalState(props) {
-    const [listaPoke, setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
+    const [listaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
     const [pokemons, setPokemons] = useState([])
     
     const adicionarPokemon = (pokes) => {
@@ -17,9 +16,10 @@ function GlobalState(props) {
           
         }
         setPokemons(pokeAdd)
+        console.log(pokeAdd)
       };
     return (
-        <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon}}>
+        <GlobalStateContext.Provider value={{ listaPoke,pokemons, setPokemons,adicionarPokemon}}>
             {props.children}
         </GlobalStateContext.Provider>
     )

@@ -9,7 +9,7 @@ import { ContainerHome } from "./Styled";
 
 
 function Home(){
-    const {listaPoke, setListaPoke} = useContext(GlobalStateContext)
+    const {listaPoke} = useContext(GlobalStateContext)
     const {adicionarPokemon} = useContext(GlobalStateContext)
     const navigate = useNavigate()
 
@@ -22,6 +22,7 @@ function Home(){
                 key={pokes.name}
                 imagem={`${BASE_URLING}/${i+1}.gif`}
                 nome={pokes.name}
+                
             />
             )
         })    

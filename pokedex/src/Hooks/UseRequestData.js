@@ -4,22 +4,22 @@ import axios from 'axios'
 const useRequestData = (initialState, url) => {
 
     const [data, setData] = useState(initialState)
-
+    const [carregando, setCarregando] = useState(false)
     useEffect(() => {
-        getData();
+        setCarregando(true)
+
+            axios.get(url)
+                .then((response) => {
+                    setCarregando(false)
+                    setData(response.data)
+                })
+                .catch((error) => {
+                   
+                })
+        
     }, [url]);
 
-    const getData = () => {
-        axios.get(url)
-            .then((response) => {
-                setData(response.data)
-                
-            })
-            .catch((error) => {
-                alert('Ocorreu um erro, tente novamente!')
-            })
-    }
-    return [data, setData,getData]
+    return [data, carregando]
 }
 export default useRequestData
 

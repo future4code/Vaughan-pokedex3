@@ -29,7 +29,7 @@ function GlobalState(props) {
     }
 
     return (
-        <GlobalStateContext.Provider value={{ listaPoke, setListaPoke,pokemons, setPokemons,adicionarPokemon, removerPokemon}}>
+        <GlobalStateContext.Provider value={{ listaPoke, pokemons, setPokemons,adicionarPokemon, removerPokemon}}>
             {props.children}
         </GlobalStateContext.Provider>
     )

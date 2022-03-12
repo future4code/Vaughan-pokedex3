@@ -13,6 +13,7 @@ export const PageContainer = styled.div`
   @media screen and (max-width: 700px) {
     flex-direction: column;
     height: auto;
+    
   }
 `
 export const PokeContainer = styled.div`
@@ -23,8 +24,8 @@ export const PokeContainer = styled.div`
   justify-content: space-between;
   background-color: aquamarine;
   border: 1px solid lightgray;
-  width: 80%;
-  border-radius: 5px;
+  width: 60%;
+  border-radius: 10px;
   box-shadow: 0px 4px 10px lightgray;
   overflow: hidden;
   img {
@@ -32,6 +33,10 @@ export const PokeContainer = styled.div`
     position: relative;
     margin-bottom: -50px;
     margin-top: -50px;
+  }
+@media screen and (max-width: 700px) {
+    flex-direction: column;
+    width: 90%;
   }
 `
 export const DetalhesContainer = styled.div`
@@ -124,12 +129,13 @@ export const MovesContainer = styled.div`
     margin-bottom: 10px;
   }
   p {
-    margin: 2px 10px;
+    margin: 2px 5px;
     font-weight: 500;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid #D3D3D3	;
   }
   @media screen and (max-width: 700px) {
-    width: 100%;
+    width: 75%;
     margin-top: 5px;
+    padding-bottom: 20px;
   }
 `

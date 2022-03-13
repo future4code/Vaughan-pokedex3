@@ -23,7 +23,7 @@ function CardsPokemons({ nome, removerPokemon}) {
                                 <div className="cartao-topo" >
                                     <div className="detalhes">
                                         <h1 class="nome">{nome}</h1>
-                                        <span>#{pokemonData.id && pokemonData.id}</span>
+                                        <span>#00{pokemonData.id && pokemonData.id}</span>
                                     </div>
 
                                     <span className="tipo">
@@ -43,7 +43,7 @@ function CardsPokemons({ nome, removerPokemon}) {
                                 <div className="cartao-informacoes">
                                     <div className="buttons">
                                         <button className="btn item1" onClick={removerPokemon}>Remover <Pokebola className="pokebola"/></button>
-                                        <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
+                                        <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Detalhes</button>
                                        
                                     </div>
                                 </div>

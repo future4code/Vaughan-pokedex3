@@ -50,7 +50,7 @@ function RequisicaoDetalhes({nome, adicionarPokemon}) {
                     <DetalhesHeader>
                         <TiposContainer>
                             <Box textTransform={'capitalize'} >
-                                <Tipo >{poke.types[0].type.name}</Tipo>
+                                <Tipo background={poke.types && poke.types[0].type.name}>{poke.types[0].type.name}</Tipo>
                                 <Tipo >{poke.types[1] ? poke.types[1].type.name : 'N/A'}</Tipo>
                             </Box>
                         </TiposContainer>

@@ -18,7 +18,7 @@ function CardsPokemons({ nome, adicionarPokemon }) {
     return (
         <ContainerCard background={pokemonData.types && pokemonData.types[0].type.name}>
             <div className="main">
-                <div className="pokedex" onClick={() => irParaDetalhes(navigate, nome)}>
+                <div className="pokedex" >
                     <div className="cartoes-pokemon">
                         <div className="cartao-pokemon">
                             <div className="cartao-topo" >
@@ -26,7 +26,7 @@ function CardsPokemons({ nome, adicionarPokemon }) {
                                     <Box textTransform={'capitalize'}>
                                         <h1 class="nome">{nome}</h1>
                                     </Box>
-                                    <span>#{pokemonData.id && pokemonData.id}</span>
+                                    <span>#00{pokemonData.id && pokemonData.id}</span>
                                 </div>
 
                                 <Box textTransform={'capitalize'}>
@@ -37,6 +37,7 @@ function CardsPokemons({ nome, adicionarPokemon }) {
 
                                 <div className="cartao-imagem">
                                     <img
+                                        onClick={() => irParaDetalhes(navigate, nome)}
                                         className="imagem"
                                         src={pokemonData.sprites && pokemonData.sprites.other.dream_world.front_default}
                                         alt={`Imagem do pokemon ${nome}`}

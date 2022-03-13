@@ -5,8 +5,12 @@ import useRequestData from "../Hooks/UseRequestData";
 import GlobalStateContext from "./GlobalStateContext"
 
 function GlobalState(props) {
-    const [listaPoke,setListaPoke] = useRequestData([], `${BASE_URL}/pokemon`)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pagina, setPagina] = useState(0)
+    const [listaPoke,setListaPoke] = useRequestData([], `${BASE_URL}/pokemon?limit=20&offset=${pagina}`)
     const [pokemons, setPokemons] = useState([])
+
+
 
     const adicionarPokemon = (pokemon) => {
       setPokemons([...pokemons, pokemon]);

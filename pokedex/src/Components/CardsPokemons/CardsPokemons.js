@@ -43,7 +43,6 @@ function CardsPokemons({ nome, adicionarPokemon}) {
                                     <div className="buttons">
                                         <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex</button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
-                                        <button className="btn item3" onClick={removerPokemon}>remover</button>
                                     </div>
                                 </div>
                             </div>

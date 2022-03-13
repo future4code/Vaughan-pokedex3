@@ -49,10 +49,14 @@ Ferramentas usadas na construção do projeto:
 
 <h3>👀 Página de Detalhes<h3> 
 
+ <h4>
+   
 * Mostra o nome e imagem frontal do pokemon
 * Mostra o stats (HP, ataque, defesa, ataque especial, defesa especial, velocidade)
 * Mostra o tipo do pokemon
 * Mostra os principais movimentos/ataques do pokemon
+   
+</h4>
   
 <h3>➕ Outras funcionalidades</h3>
   

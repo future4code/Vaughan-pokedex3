@@ -1,4 +1,5 @@
-# POKEDEX
+<h1 align="center"> PokeDéx </h1>
+
 
 Nome dos integrantes: 
 - Gledson Lucas

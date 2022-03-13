@@ -1,9 +1,11 @@
-# POKEDEX
+<h1 align="center"> PokeDéx </h1>
+
+
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Gledson Lucas
+- Geyson Mesquita
+- Ana Karine
 
 Link do Surge: www.link.com.br
 

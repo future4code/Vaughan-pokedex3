@@ -25,7 +25,6 @@ function GlobalState(props) {
       const newPokemonList = [...listaPoke, pokemon];
       setListaPoke(newPokemonList);
     };
-    
 
     return (
         <GlobalStateContext.Provider value={{ listaPoke,setListaPoke,pokemons, setPokemons,adicionarPokemon, removerPokemon}}>

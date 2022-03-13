@@ -14,7 +14,7 @@ import {
     GiRunningNinja, GiHeartBottle
 } from 'react-icons/gi'
 
-function RequisicaoDetalhes(nome) {
+function RequisicaoDetalhes({nome, adicionarPokemon}) {
     const { id } = useParams()
     const [detalhePokemon, setDetalhePokemon] = useState([])
 
@@ -50,12 +50,12 @@ function RequisicaoDetalhes(nome) {
                     <DetalhesHeader>
                         <TiposContainer>
                             <Box textTransform={'capitalize'} >
-                                <Tipo >{poke.types[0].type.name}</Tipo>
+                                <Tipo background={poke.types && poke.types[0].type.name}>{poke.types[0].type.name}</Tipo>
                                 <Tipo >{poke.types[1] ? poke.types[1].type.name : 'N/A'}</Tipo>
                             </Box>
                         </TiposContainer>
                         <Box>
-                            <button>Adicionar à Pokedéx</button>
+                            <button onClick={adicionarPokemon}>Adicionar à Pokedéx</button>
                         </Box>
                     </DetalhesHeader>
 

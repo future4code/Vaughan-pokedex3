@@ -69,6 +69,10 @@ export const PageContainer = styled.div`
     flex-direction: column;
     height: auto;
   }
+@media screen and (max-width: 700px) {
+    flex-direction: column;
+    height: auto;
+  }
 `
 export const PokeContainer = styled.div`
   display: flex;
@@ -127,11 +131,13 @@ export const TiposContainer = styled.div`
   }
 `
 export const Tipo = styled.div`
-  font-size: 18px;
-  background-color: white;
+ ${props => RESOLVE_STYLE[props.background]}
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid #484848;
   opacity: 0.7;
-  border-radius: 15px;
-  padding: 2px 10px;
+  border-radius: 10px;
+  padding: 2px 8px;
 @media screen and (max-width: 700px) {
   font-size: 15px;
 }
@@ -215,5 +221,3 @@ export const MovesContainer = styled.div`
     padding-bottom: 20px;
   }
 `
-
-

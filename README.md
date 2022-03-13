@@ -1,18 +1,6 @@
 <h1 align="center"> PokeDéx </h1>
 
-### Tópicos 
 
-- [Descrição do projeto](#descrição-do-projeto)
-
-- [Funcionalidades](#funcionalidades)
-
-- [Aplicação](#aplicação)
-
-- [Ferramentas utilizadas](#ferramentas-utilizadas)
-
-- [Link do projeto](#acesso-ao-projeto)
-
-- [Desenvolvedores](#desenvolvedores)
 
 Nome dos integrantes: 
 - Gledson Lucas

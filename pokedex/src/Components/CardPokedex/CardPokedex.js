@@ -1,23 +1,13 @@
 import React from "react";
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
-=======
-import { useNavigate} from "react-router-dom";
->>>>>>> master
 import { BASE_URL } from "../../Constants/Urls";
 import useRequestData from "../../Hooks/UseRequestData";
+import {Pokebola} from "../../icons/icons";
 import { irParaDetalhes } from "../../Routes/Coordenadas";
-<<<<<<< HEAD
 import { ContainerCard } from "./style";
 
 
-function CardsPokemons({ nome, adicionarPokemon, removerPokemon}) {
-=======
-import { ContainerCard} from "./style";
-
-
-function CardsPokemons({ nome, adicionarPokemon}) {
->>>>>>> master
+function CardsPokemons({ nome, removerPokemon}) {
 
     const navigate = useNavigate()
     const poke = nome
@@ -52,9 +42,9 @@ function CardsPokemons({ nome, adicionarPokemon}) {
 
                                 <div className="cartao-informacoes">
                                     <div className="buttons">
-                                        <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex</button>
+                                        <button className="btn item1" onClick={removerPokemon}>Remover <Pokebola className="pokebola"/></button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
-                                        <button className="btn item3" onClick={removerPokemon}>remover</button>
+                                       
                                     </div>
                                 </div>
                             </div>

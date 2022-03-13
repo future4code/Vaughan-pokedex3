@@ -3,7 +3,7 @@ import CardPokedex from '../../Components/CardPokedex/CardPokedex'
 import Header from "../../Components/Header/Header";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 import Pokedexs from "../../Assets/Pokedexs.png"
-import { VazioImg } from "./Styled";
+import { VazioImg, ContainerPokedex } from "./Styled";
 
 function PaginaPokedex() {
   const { pokemons } = useContext(GlobalStateContext)
@@ -27,12 +27,13 @@ function PaginaPokedex() {
   
   
   return (
-    <div>
+    <ContainerPokedex>
       
       <Header/>
+
       {listPoke.length ===0 ? <VazioImg src={Pokedexs}/>: listPoke}
       
-    </div>
+    </ContainerPokedex>
 
   );
 }

@@ -94,7 +94,6 @@ export const ContainerCard = styled.div`
   display: flex;
   padding: 10px 0;
   &:hover{
-    cursor: pointer;
     animation: pokemon-up .5s;
   }
 }
@@ -139,6 +138,7 @@ export const ContainerCard = styled.div`
   position: relative;
   height: 110px;
   padding-left: 50px;
+  cursor: pointer;
 }
 }
 

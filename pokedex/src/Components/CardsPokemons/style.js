@@ -75,6 +75,8 @@ export const RESOLVE_STYLE = {
 `,
 }
 
+
+
 export const ContainerCard = styled.div`
 @keyframes pokemon-up {
   0%,
@@ -105,7 +107,7 @@ export const ContainerCard = styled.div`
 }
 
 .cartao-pokemon {
-  box-shadow: #6b727a 0px 7px 29px 0px;
+  box-shadow: #6b727a 0px 5px 15px 0px;
   border-radius: 10px;
 
 
@@ -159,17 +161,17 @@ export const ContainerCard = styled.div`
 
  .buttons{
   	 gap: 10px;
-    .pokebola{
-      &:hover{
-        color: #000;
-      }
-    }
    .btn{
      background-color: transparent;
+     color: #000;
      cursor: pointer;
      border: 1px solid #cad1d9;
      border-radius: 5px;
      padding: 5px;
+     &:hover{
+       background-color: #ec1c24;
+       color: #fff;
+     }
      
    }
  }

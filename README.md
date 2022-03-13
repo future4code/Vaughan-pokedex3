@@ -1,5 +1,5 @@
 <h1 align="center"> PokeDéx </h1>
-![pokedex](https://user-images.githubusercontent.com/94838711/158077533-ab5cd9c8-20f2-4e80-bc03-45e2baadb896.png)
+<img![pokedex](https://user-images.githubusercontent.com/94838711/158077533-ab5cd9c8-20f2-4e80-bc03-45e2baadb896.png)/>
 
 Nome dos integrantes: 
 - Gledson Lucas

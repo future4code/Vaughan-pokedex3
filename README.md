@@ -62,20 +62,19 @@ Ferramentas usadas na construção do projeto:
   
 * Responsividade para mobile
 * Caso o usuário digite uma url inválida o mesmo será direcionado para a página de erro
+* Paginação
   
 <h2 id="nao-funciona">:x: O que não funciona</h2>
 
 * Ao clicar no botão de adicionar, o card do Pokemon clicado deve desaparecer da tela (Página Home);
 * Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
 * Batalha dos pokemons
-* Paginação
  
 <h2 id="pendente">:construction: Em desenvolvimento</h2>
 
 - [ ] Ao clicar no botão de adicionar, o card do Pokemon clicado deve desaparecer da tela (Página Home);
 - [ ] Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
 - [ ] Batalha dos pokemons
-- [ ] Paginação
 - [ ] Finalizando responsividade
 
 <h2> 🖥️ Imagens do site (computador)</h2>

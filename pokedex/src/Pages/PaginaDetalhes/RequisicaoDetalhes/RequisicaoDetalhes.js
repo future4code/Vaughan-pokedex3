@@ -14,7 +14,7 @@ import {
     GiRunningNinja, GiHeartBottle
 } from 'react-icons/gi'
 
-function RequisicaoDetalhes(nome) {
+function RequisicaoDetalhes({nome, adicionarPokemon}) {
     const { id } = useParams()
     const [detalhePokemon, setDetalhePokemon] = useState([])
 
@@ -55,7 +55,7 @@ function RequisicaoDetalhes(nome) {
                             </Box>
                         </TiposContainer>
                         <Box>
-                            <button>Adicionar à Pokedéx</button>
+                            <button onClick={adicionarPokemon}>Adicionar à Pokedéx</button>
                         </Box>
                     </DetalhesHeader>
 

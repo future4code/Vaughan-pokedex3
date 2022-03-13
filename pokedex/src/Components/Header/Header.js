@@ -8,9 +8,6 @@ import { MdOutlineCatchingPokemon } from 'react-icons/md'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
 
-const MenuStyle = styled(MenuButton)`
-border: 1px solid white;
-`
 
 function Header() {
     const navigate = useNavigate()

@@ -1,21 +1,19 @@
 import React, { useContext } from "react";
-import CardsPokemons from "../../Components/CardsPokemons/CardsPokemons";
+import CardPokedex from '../../Components/CardPokedex/CardPokedex'
 import Header from "../../Components/Header/Header";
-import { BASE_URLING } from "../../Constants/Urls";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 
 
 
 function PaginaPokedex() {
-  const { pokemons, setPokemons } = useContext(GlobalStateContext)
+  const { pokemons } = useContext(GlobalStateContext)
   const {removerPokemon} = useContext(GlobalStateContext)
 
   const listPoke = pokemons.map((pikachu, i) => {
     return (
       <div>
-        <CardsPokemons
+        <CardPokedex
           nome={pikachu.name}
-          imagem={`${BASE_URLING}/${i + 1}.gif`}
           removerPokemon={()=>removerPokemon(pikachu)}
         />
         

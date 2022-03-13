@@ -65,7 +65,6 @@ export const PageContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  overflow-y: scroll;
 @media screen and (max-width: 700px) {
     flex-direction: column;
     height: auto;
@@ -84,7 +83,7 @@ export const PokeContainer = styled.div`
   box-shadow: 0px 4px 10px lightgray;
   overflow: hidden;
   img {
-    height: 300px;
+    height: 270px;
     position: relative;
     margin-bottom: -80px;
     margin-top: -80px;

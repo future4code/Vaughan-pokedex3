@@ -1,13 +1,13 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { BASE_URL } from "../../Constants/Urls";
 import useRequestData from "../../Hooks/UseRequestData";
 import {Pokebola} from "../../icons/icons";
 import { irParaDetalhes } from "../../Routes/Coordenadas";
-import { ContainerCard, resolveBackground, RESOLVE_STYLE } from "./style";
+import { ContainerCard} from "./style";
 
 
-function CardsPokemons({ nome, imagem, adicionarPokemon, removerPokemon}) {
+function CardsPokemons({ nome, adicionarPokemon}) {
 
     const navigate = useNavigate()
     const poke = nome
@@ -44,7 +44,6 @@ function CardsPokemons({ nome, imagem, adicionarPokemon, removerPokemon}) {
                                     <div className="buttons">
                                         <button className="btn item1" onClick={adicionarPokemon}>Adicionar à Pokédex <Pokebola className="pokebola"/></button>
                                         <button className="btn item2" onClick={()=> irParaDetalhes(navigate, nome)}>Mais detalhes</button>
-                                        <button className="btn item2" onClick={removerPokemon}>remover</button>
                                     </div>
                                 </div>
                             </div>

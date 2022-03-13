@@ -215,5 +215,3 @@ export const MovesContainer = styled.div`
     padding-bottom: 20px;
   }
 `
-
-

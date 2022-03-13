@@ -1,23 +1,12 @@
 import React from "react";
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-=======
 import { useNavigate} from "react-router-dom";
->>>>>>> master
 import { BASE_URL } from "../../Constants/Urls";
 import useRequestData from "../../Hooks/UseRequestData";
 import { irParaDetalhes } from "../../Routes/Coordenadas";
-<<<<<<< HEAD
-import { ContainerCard } from "./style";
-
-
-function CardsPokemons({ nome, adicionarPokemon, removerPokemon}) {
-=======
 import { ContainerCard} from "./style";
 
 
 function CardsPokemons({ nome, adicionarPokemon}) {
->>>>>>> master
 
     const navigate = useNavigate()
     const poke = nome

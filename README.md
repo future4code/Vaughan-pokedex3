@@ -1,5 +1,7 @@
 # POKEDEX
 
+Rafa-Js Rafa-Ts Rafa-React Rafa-HTML Rafa-CSS
+
 Nome dos integrantes: 
 - Pessoa 1
 - Pessoa 2

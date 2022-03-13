@@ -15,7 +15,6 @@ function Home() {
     const navigate = useNavigate()
 
 
-
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes, i) => {
         return (
             <CardsPokemons

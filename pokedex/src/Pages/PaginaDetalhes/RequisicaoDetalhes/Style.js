@@ -69,6 +69,10 @@ export const PageContainer = styled.div`
     flex-direction: column;
     height: auto;
   }
+@media screen and (max-width: 700px) {
+    flex-direction: column;
+    height: auto;
+  }
 `
 export const PokeContainer = styled.div`
   display: flex;

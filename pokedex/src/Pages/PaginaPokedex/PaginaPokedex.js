@@ -9,16 +9,6 @@ import { VazioImg, ContainerListaPokedex } from "./Styled";
 function PaginaPokedex() {
   const { pokemons, setPokemons, removerPokemon } = useContext(GlobalStateContext)
 
-  useEffect(()=>{
-    atualizaPagina()
-},[])
-
-  const atualizaPagina = () =>{
-    const pokes = JSON.parse(localStorage.getItem(`pokedex`))
-    if(pokes){
-        setPokemons(pokes)
-    }
-}
 
   const listPoke = pokemons.map((pikachu) => {
     

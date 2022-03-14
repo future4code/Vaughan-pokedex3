@@ -79,9 +79,13 @@ Ferramentas usadas na construção do projeto:
 
 <h2> 🖥️ Imagens do site (computador)</h2>
 ![2](https://user-images.githubusercontent.com/94838711/158102210-f85342d8-53f9-43ff-af1e-545cede78f28.png)
+  
 ![1](https://user-images.githubusercontent.com/94838711/158102215-253ad9b9-114b-419e-94f6-bc458d3aebac.png)
+  
 ![image](https://user-images.githubusercontent.com/94838711/158102496-9defe43f-7324-45c2-8e61-c420fac74f49.png)
+  
 ![3](https://user-images.githubusercontent.com/94838711/158102217-041ecd64-6a31-4596-8b6f-cc325bc67267.png)
+  
 ![image](https://user-images.githubusercontent.com/94838711/158102297-7fb2328b-3c6f-49fd-bcf7-be43ab0f819d.png)
 
 <h2> 📱 Imagens do site (mobile)</h2>

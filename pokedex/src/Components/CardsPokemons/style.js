@@ -75,6 +75,8 @@ export const RESOLVE_STYLE = {
 `,
 }
 
+
+
 export const ContainerCard = styled.div`
 @keyframes pokemon-up {
   0%,
@@ -162,6 +164,7 @@ export const ContainerCard = styled.div`
     }
    .btn{
      background-color: transparent;
+     color: #000;
      cursor: pointer;
      border: 1px solid #cad1d9;
      border-radius: 5px;

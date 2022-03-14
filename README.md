@@ -14,7 +14,7 @@
 <p align="center">🖥️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site inspirado na Pokédex do anime Pokémon. nele você pode criar sua própria pokédex com os seus pokémons preferidos. </p>
 
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
- <a href="">Pokedex</a>
+ <a href="https://pokedex-vaughan3.surge.sh">PokeDéx</a>
 
 <h2 id="tecnologias"> 🛠 Tecnologias </h2>
 

@@ -34,7 +34,8 @@ function Header() {
                             marginRight={'16px'}
                             as={IconButton}
                             aria-label='Options'
-                            icon={<HamburgerIcon color={'#fff'} />}
+                            icon={<HamburgerIcon color={'#fff'}
+                            />}
                             variant='outline'
                             bg={'#000000'}
                             border={'1px solid white'}
@@ -44,8 +45,8 @@ function Header() {
                             width={'50px'}
                             height={'50px'}
                             _hover={{
-                                bg: "#696f81",
-                                cursor: "pointer"
+                                bg: "#FFB100",
+                                cursor: "pointer",
                             }}
                         />
                     <MenuList justify={'center'} align={'center'}

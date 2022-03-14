@@ -22,7 +22,7 @@ function CardsPokemons({ nome, removerPokemon}) {
                             <div className="cartao-pokemon">
                                 <div className="cartao-topo" >
                                     <div className="detalhes">
-                                        <h1 class="nome">{nome}</h1>
+                                        <h1 className="nome">{nome}</h1>
                                         <span>#00{pokemonData.id && pokemonData.id}</span>
                                     </div>
 

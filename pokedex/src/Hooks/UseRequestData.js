@@ -19,7 +19,7 @@ const useRequestData = (initialState, url) => {
         
     }, [url]);
 
-    return [data, carregando]
+    return [data, setData, carregando]
 }
 export default useRequestData
 

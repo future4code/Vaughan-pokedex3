@@ -20,12 +20,11 @@ function PaginaPokedex() {
     }
 }
 
-  const listPoke = pokemons.map((pikachu, i) => {
+  const listPoke = pokemons.map((pikachu) => {
     
     return (
       
-      <div>
-
+      <div key={pikachu.name}>
         <Box textTransform={'capitalize'}>
         <CardPokedex
           nome={pikachu.name}

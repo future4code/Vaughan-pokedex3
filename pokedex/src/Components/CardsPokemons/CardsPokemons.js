@@ -27,7 +27,7 @@ function CardsPokemons({ nome, adicionarPokemon}) {
                             <div className="cartao-topo" >
                                 <div className="detalhes">
                                     <Box textTransform={'capitalize'}>
-                                        <h1 class="nome">{nome}</h1>
+                                        <h1 className="nome">{nome}</h1>
                                     </Box>
                                     <span>#00{pokemonData.id && pokemonData.id}</span>
                                 </div>

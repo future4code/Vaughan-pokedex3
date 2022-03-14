@@ -68,14 +68,12 @@ Ferramentas usadas na construção do projeto:
 
 * Ao clicar no botão de adicionar, o card do Pokemon clicado deve desaparecer da tela (Página Home);
 * Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
-* Batalha dos pokemons
  
 <h2 id="pendente">:construction: Em desenvolvimento</h2>
 
 - [ ] Ao clicar no botão de adicionar, o card do Pokemon clicado deve desaparecer da tela (Página Home);
 - [ ] Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
 - [ ] Batalha dos pokemons
-- [ ] Finalizando responsividade
 
 <h2> 🖥️ Imagens do site (computador)</h2>
   

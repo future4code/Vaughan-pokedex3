@@ -6,7 +6,8 @@
   <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
   <a href="#nao-funciona">O que não funciona</a> &#xa0; | &#xa0;
   <a href="#pendente">Em desenvolvimento</a> &#xa0; | &#xa0;
-  <a href="#desenvolvedores">Desenvolvedores</a>
+  <a href="#imagens">Imagens do Site</a>  &#xa0; | &#xa0;
+  <a href="#desenvolvedores">Desenvolvedores</a> 
 </p>
 
 <h2 id="sobre">:notebook: Sobre </h2>
@@ -75,7 +76,7 @@ Ferramentas usadas na construção do projeto:
 - [ ] Botão para adicionar ou remover o pokemon da Pokedex a partir da página de detalhes (Página de Detalhes);
 - [ ] Batalha dos pokemons
 
-<h2> 🖥️ Imagens do site (computador)</h2>
+<h2 id="imagens"> 🖥️ Imagens do site (computador)</h2>
   
 ![2](https://user-images.githubusercontent.com/94838711/158102210-f85342d8-53f9-43ff-af1e-545cede78f28.png)
   

@@ -6,7 +6,7 @@ export const VazioImg = styled.img`
     
 @media screen and (max-width: 700px) {
     padding: 70px;
-    width: 100vw;
+    width: 100%;
   }
 `
 export const ContainerListaPokedex = styled.div`

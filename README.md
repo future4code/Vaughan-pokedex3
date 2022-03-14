@@ -11,7 +11,7 @@
 
 <h2 id="sobre">:notebook: Sobre </h2>
 
-<p align="center">🖥️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu, para o desenvolvimento de um web site de simulação da pokedéx baseado em React JS. </p>
+<p align="center">🖥️ Projeto desenvolvido conforme proposta do bootcamp ministrado pela Labenu baseado em React JS, para o desenvolvimento de um web site inspirado na Pokédex do anime Pokémon. nele você pode criar sua própria pokédex com os seus pokémons preferidos. </p>
 
 <h2 id="link">:link: Link Surge - link para visualização do site</h2>
  <a href="">Pokedex</a>

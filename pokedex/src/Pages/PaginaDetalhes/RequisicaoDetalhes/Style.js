@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Box } from "@chakra-ui/react";
 
 export const RESOLVE_STYLE = {
   normal: css`
@@ -77,7 +78,7 @@ export const PageContainer = styled.div`
 export const PokeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 20px;
   align-items: center;
   justify-content: space-between;
   ${props => RESOLVE_STYLE[props.background]}
@@ -102,7 +103,9 @@ export const PokeContainer = styled.div`
 `
 export const AtaqueMovesContainer = styled.div`
   display: flex;
+  gap: 100px;
   flex-direction: row;
+  justify-content: space-between;
 @media screen and (max-width: 700px) {
     flex-direction: column;
   }
@@ -114,10 +117,22 @@ export const DetalhesContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: white;
+  background-color: #F4F4F4;
   @media screen and (max-width: 700px) {
     flex-direction: column;
   }
+`
+export const DetalhesHeader = styled.div`
+  width: 100%;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+@media screen and (max-width: 700px) {
+    width: 90%;
+    margin-top: 5px;
+    padding-bottom: 50px;
+}
 `
 export const TiposContainer = styled.div`
   font-weight: 700;
@@ -142,29 +157,25 @@ export const Tipo = styled.div`
   font-size: 15px;
 }
 `
-export const DetalhesHeader = styled.div`
-  width: 100%;
-  margin-right: 40px;
+export const Status = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  flex-direction: row;
 @media screen and (max-width: 700px) {
-    width: 90%;
-    margin-top: 5px;
-    padding-bottom: 50px;
+    flex-direction: column;
+    gap: 0;
 }
 `
 export const StatusContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   gap: 20px;
-  flex-direction: row;
+  flex-direction: column;
   margin: 10px;
-  margin-top: 50px;
-  h3 {
+  h1 {
     width: 100%;
-    color: gray;
-    border-bottom: 2px solid gray;
+    color: #1cb500;
+    border-bottom: 2px solid black;
     margin-bottom: 10px;
   }
   @media screen and (max-width: 700px) {
@@ -203,21 +214,26 @@ export const MovesContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
-  margin-top: 50px;
   width: 40%;
-  h3 {
-    color: gray;
-    border-bottom: 2px solid gray;
+  h1 {
+    width: 100%;
+    color: #1cb500;
+    border-bottom: 2px solid black;
     margin-bottom: 10px;
   }
   p {
     margin: 2px 5px;
     font-weight: 500;
-    border-bottom: 1px solid #D3D3D3	;
+    border-bottom: 1px solid #D3D3D3;
   }
   @media screen and (max-width: 700px) {
     width: 75%;
     margin-top: 5px;
     padding-bottom: 20px;
   }
+`
+export const BoxMoves = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
 `

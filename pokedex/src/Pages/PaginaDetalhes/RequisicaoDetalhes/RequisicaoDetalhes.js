@@ -1,33 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { styled } from '@mui/material/styles';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import {
-    PageContainer, PokeContainer, DetalhesContainer, AtaqueMovesContainer,
-    TiposContainer, Tipo, DetalhesHeader, StatusContainer, MovesContainer
-} from './Style'
 import { Box } from '@chakra-ui/react'
 import { BASE_URL } from '../../../Constants/Urls'
 import { useParams } from 'react-router-dom'
-import {
-    GiPointySword, GiShieldEchoes, GiMagicTrident, GiShieldOpposition,
-    GiRunningNinja, GiHeartBottle
-} from 'react-icons/gi'
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { GiPointySword, GiShieldEchoes, GiMagicTrident, GiShieldOpposition, GiRunningNinja, GiHeartBottle } from 'react-icons/gi'
+import { PageContainer, PokeContainer, DetalhesContainer, BoxMoves, AtaqueMovesContainer, TiposContainer, Tipo, Status, DetalhesHeader, StatusContainer, MovesContainer } from './Style'
 
-function RequisicaoDetalhes({nome, adicionarPokemon}) {
+
+function RequisicaoDetalhes() {
     const { id } = useParams()
     const [detalhePokemon, setDetalhePokemon] = useState([])
-
-    useEffect(() => {
-        axios
-            .get(`${BASE_URL}/pokemon/${id}`)
-            .then((res) => {
-                setDetalhePokemon([res.data])
-            })
-            .catch((err) => {
-                alert("Ocorreu um erro, tente novamente!")
-            });
-    }, []);
 
     const StyleProgresso = styled(LinearProgress)(() => ({
         height: 10,
@@ -42,6 +26,17 @@ function RequisicaoDetalhes({nome, adicionarPokemon}) {
         },
     }))
 
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/pokemon/${id}`)
+            .then((res) => {
+                setDetalhePokemon([res.data])
+            })
+            .catch((err) => {
+                alert("Ocorreu um erro, tente novamente!")
+            });
+    }, []);
+
     const renderizarPokemon = detalhePokemon && detalhePokemon.map((poke) => {
         return (
             <PageContainer key={poke.name}>
@@ -55,7 +50,7 @@ function RequisicaoDetalhes({nome, adicionarPokemon}) {
                             </Box>
                         </TiposContainer>
                         <Box>
-                            <button onClick={adicionarPokemon}>Adicionar à Pokedéx</button>
+                            <button >Adicionar à Pokedéx</button>
                         </Box>
                     </DetalhesHeader>
 
@@ -64,56 +59,58 @@ function RequisicaoDetalhes({nome, adicionarPokemon}) {
                     </div>
 
                     <DetalhesContainer>
-
                         <Box>
                             <Box textTransform={'capitalize'}><h1>{poke.name}</h1></Box>
                         </Box>
 
                         <Box>
-                        <AtaqueMovesContainer>
-                            <StatusContainer>
+                            <AtaqueMovesContainer>
 
-                                <h1>Stats</h1>
+                                <StatusContainer>
+                                        <h1>Stats</h1>
 
-                                <div>
-                                    <p> <GiHeartBottle /> <b>HP:</b> {poke.stats[0].base_stat}
-                                        <StyleProgresso variant="determinate" value={poke.stats[0].base_stat} /></p>
+                                    <Status>
+                                        <div>
+                                            <p> <GiHeartBottle /> <b>HP:</b> {poke.stats[0].base_stat}
+                                                <StyleProgresso variant="determinate" value={poke.stats[0].base_stat} /></p>
 
-                                    <p> <GiPointySword /> <b>Ataque:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}
-                                        <StyleProgresso variant="determinate" value={poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'} /></p>
+                                            <p> <GiPointySword /> <b>Ataque:</b> {poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'}
+                                                <StyleProgresso variant="determinate" value={poke.stats[1].base_stat ? poke.stats[1].base_stat : 'N/A'} /></p>
 
-                                    <p> <GiShieldEchoes /> <b>Defesa:</b> {poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'}
-                                        <StyleProgresso variant="determinate" value={poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'} /></p>
-                                </div>
+                                            <p> <GiShieldEchoes /> <b>Defesa:</b> {poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'}
+                                                <StyleProgresso variant="determinate" value={poke.stats[2].base_stat ? poke.stats[2].base_stat : 'N/A'} /></p>
+                                        </div>
 
-                                <div>
-                                    <p> <GiRunningNinja /> <b>Velocidade: </b> {poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'}
-                                        <StyleProgresso variant="determinate" value={poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'} /></p>
+                                        <div>
+                                            <p> <GiRunningNinja /> <b>Velocidade: </b> {poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'}
+                                                <StyleProgresso variant="determinate" value={poke.stats[5].base_stat ? poke.stats[5].base_stat : 'N/A'} /></p>
 
-                                    <p> <GiMagicTrident /> <b>Ataque-Especial:</b> {poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'}
-                                        <StyleProgresso variant="determinate" value={poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'} /></p>
+                                            <p> <GiMagicTrident /> <b>Ataque-Especial:</b> {poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'}
+                                                <StyleProgresso variant="determinate" value={poke.stats[3].base_stat ? poke.stats[3].base_stat : 'N/A'} /></p>
 
-                                    <p> <GiShieldOpposition /> <b>Defesa-Especial: </b> {poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'}
-                                        <StyleProgresso variant="determinate" value={poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'} /></p>
-                                </div>
+                                            <p> <GiShieldOpposition /> <b>Defesa-Especial: </b> {poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'}
+                                                <StyleProgresso variant="determinate" value={poke.stats[4].base_stat ? poke.stats[4].base_stat : 'N/A'} /></p>
+                                        </div>
+                                    </Status>
+                                </StatusContainer>
 
-                            </StatusContainer>
+                                <MovesContainer>
 
-
-                            <MovesContainer>
-                                <Box textTransform={'capitalize'}>
                                     <h1>Attacks</h1>
-                                    <p>- {poke.moves[0].move.name}</p>
-                                    <p>- {poke.moves[1] ? poke.moves[1].move.name : 'N/A'}</p>
-                                    <p>- {poke.moves[2] ? poke.moves[2].move.name : 'N/A'}</p>
-                                    <p>- {poke.moves[3] ? poke.moves[3].move.name : 'N/A'}</p>
-                                    <p>- {poke.moves[4] ? poke.moves[4].move.name : 'N/A'}</p>
-                                </Box>
-                            </MovesContainer>
-                        </AtaqueMovesContainer>
+                                    
+                                    <BoxMoves textTransform={'capitalize'}>
+                                        <p>- {poke.moves[0].move.name}</p>
+                                        <p>- {poke.moves[1] ? poke.moves[1].move.name : 'N/A'}</p>
+                                        <p>- {poke.moves[2] ? poke.moves[2].move.name : 'N/A'}</p>
+                                        <p>- {poke.moves[3] ? poke.moves[3].move.name : 'N/A'}</p>
+                                        <p>- {poke.moves[4] ? poke.moves[4].move.name : 'N/A'}</p>
+                                    </BoxMoves>
+                                </MovesContainer>
+
+                            </AtaqueMovesContainer>
                         </Box>
-                        
                     </DetalhesContainer>
+
                 </PokeContainer>
             </PageContainer >
         )

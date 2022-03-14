@@ -1,18 +1,12 @@
 import styled from 'styled-components'
 
-export const ContainerPokedex = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-`  
 export const VazioImg = styled.img`
     width: 60%;
-    margin-top: 40px;
+    margin-top: 20px;
     
 @media screen and (max-width: 700px) {
-    padding: 100px;
-    width: 100%;
+    padding: 70px;
+    width: 100vw;
   }
 `
 export const ContainerListaPokedex = styled.div`

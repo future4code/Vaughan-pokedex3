@@ -10,9 +10,6 @@ import Pagination from '@mui/material/Pagination';
 function Home() {
     const { listaPoke, paginaAtual, setPaginaAtual, setPagina, pokemons, setPokemons } = useContext(GlobalStateContext)
    
-    useEffect(()=>{
-        atualizaPagina()
-    },[])
 
     const mudarPagina = (event, number) => {
         setPaginaAtual(number);
@@ -26,19 +23,15 @@ function Home() {
         }else{
           const adicionarPoke = window.confirm(`Quer adiconar o ${pokes.name} a pokedex?`)
           if(adicionarPoke){
-            setPokemons([ ...pokemons, pokes]);
-            localStorage.setItem(`pokedex`, JSON.stringify(pokemons))
+            const novosPokes = [ ...pokemons, pokes]
+            setPokemons(novosPokes);
           }
         }
       };
 
-   const atualizaPagina = () =>{
-        const pokes = JSON.parse(localStorage.getItem(`pokedex`))
-        if(pokes){
-            setPokemons(pokes)
-        }
-    }
 
+   
+    
     const listaMapeada = listaPoke.results && listaPoke.results.map((pokes) => {
         return (
             <CardsPokemons

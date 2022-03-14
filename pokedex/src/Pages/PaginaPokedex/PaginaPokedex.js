@@ -23,7 +23,7 @@ function PaginaPokedex() {
     
     return (
       
-      <div>
+      <div key={pikachu.name}>
         
         <CardPokedex
           nome={pikachu.name}
